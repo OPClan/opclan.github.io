@@ -1,0 +1,161 @@
+/* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* === VARIABLES PAR DÉFAUT (THEME SOMBRE) === */
+  :root {
+    --bg: #121212;
+    --text: #ffffff;
+    --subtle: #cccccc;
+    --accent: #4F46E5;
+    --header: #1F1F1F;
+    --footer: #1F1F1F;
+  }
+  
+  /* === THEME CLAIR === */
+  .light-theme {
+    --bg: #f4f4f4;
+    --text: #1a1a1a;
+    --subtle: #555555;
+    --accent: #4F46E5;
+    --header: #ffffff;
+    --footer: #eaeaea;
+  }
+  
+  /* === CORPS DE PAGE === */
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  
+  /* === LIENS === */
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* === HEADER === */
+  header {
+    background-color: var(--header);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    border-bottom: 2px solid var(--accent);
+  }
+  
+  header h1 {
+    font-size: 2.2rem;
+    color: var(--accent);
+  }
+  
+  /* === NAVIGATION === */
+  nav ul {
+    margin-top: 1rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  /* === SECTION PRINCIPALE === */
+  .hero {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: var(--subtle);
+  }
+  
+  /* === FOOTER === */
+  footer {
+    background-color: var(--footer);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--subtle);
+  }
+  
+  /* === BOUTON DE THÈME === */
+  .theme-button {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--accent);
+    color: var(--text);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    z-index: 999;
+  }
+  
+  .theme-button .icon {
+    display: inline-block;
+    transition: transform 0.5s ease;
+  }
+  
+  .theme-button:hover .icon {
+    transform: rotate(180deg);
+  }
+  
+  .theme-button:hover {
+    background-color: #3B37C7;
+  }
+  
+  /* === BOUTONS GÉNÉRIQUES === */
+  .btn {
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .btn:hover {
+    background-color: #3B37C7;
+    transform: scale(1.03);
+  }
+  
+  /* === RESPONSIVE === */
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+  
+    .hero h2 {
+      font-size: 1.6rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+  
