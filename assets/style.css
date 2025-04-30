@@ -158,4 +158,35 @@
       font-size: 1rem;
     }
   }
+/* Titre combiné avec effet de dégradé animé, sans le glow */
+.main-title {
+    font-size: 1.9rem; /* Taille réduite pour un effet plus subtil */
+    color: var(--accent);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Un peu plus espacé pour l'effet stylé */
+    font-weight: bold;
+    
+    /* Dégradé de couleur animé */
+    background: linear-gradient(45deg, #ff007f, #4F46E5);
+    -webkit-background-clip: text;
+    color: transparent;
+    
+    /* Animation du dégradé */
+    animation: moveGradient 3s linear infinite;
+  }
+  
+  /* Animation du dégradé */
+  @keyframes moveGradient {
+    0% {
+      background-position: -500% 0;
+    }
+    100% {
+      background-position: 500% 0;
+    }
+  }
+  
+  .main-title:hover {
+    color: var(--accent); /* Garde la couleur du texte quand survolé */
+  }
   

@@ -7,11 +7,11 @@ function applyTheme(isLight) {
   if (isLight) {
     body.classList.add('light-theme');
     icon.textContent = '🌙';
-    label.textContent = 'Mode sombre';
+    label.textContent = 'Dark Mode';
   } else {
     body.classList.remove('light-theme');
     icon.textContent = '☀️';
-    label.textContent = 'Mode clair';
+    label.textContent = 'Light Mode';
   }
   localStorage.setItem('theme', isLight ? 'light' : 'dark');
 }
